@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+
+<head>
+
+    <title>App Framework Kitchen Sink</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" type="text/css" href="lib/appframework/icons.css" />
+    <link rel="stylesheet" type="text/css" href="lib/appframework/af.ui.css" />
+    <link rel="stylesheet" type="text/css" href="css/ionic.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/fastclick.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/appframework/appframework.ui.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+        
+    <script src='cordova.js'></script>
+</head>
+
+<body>
+    <div id="splashscreen" class='ui-loader heavy'>
+        App Framework
+        <br>
+        <br>
+        <span class='ui-icon ui-icon-loading spin'></span>
+        <h1>Starting app</h1>
+    </div>
+
+    <div class="view splitview">
+        
+        <div style="height: 40px; width: 100%;background: #E13B39;">
+            <div style="height: 25px; width: 20px; margin: 5px 3px;float:left" id="menuCase" data-left-menu="left" data-transition="cover"><img src="img/menu.png" width="20px" height="25px" /></div>
+            <div onclick="goBack()" id="backButton" style="display: none; height: 20px; width: 25px; margin: 5px 3px; float:left"><img src="img/back.png" width="25px" height="35px" /></div>
+            
+            
+            
+            <div id="pesquisa" style="background-color: #FFF; border: 2px solid;height: 40px; margin-top: auto; float: right;"><img onclick="bntBuscar()" src="img/busca-icon.png" width="40px" height="40px" /></div>
+            <div id="pesquisa" style="height: 40px; width: 75%; margin-right: 3%; margin-top: auto; float: right;"><input placeholder="Digite aqui o que você procura" onkeypress="pesqKey(event)" id="buscaQuery" style="padding: 0px; font-weight: bold; width: 100%; margin-right: 10px; margin-bottom: 0px; border-radius: 0px;" type="text"></div>
+        </div>
+        
+        <div class="pages">
+            <div onscroll="scrolled()" class="panel" id="main" data-title="Catalogo Net" data-selected="true">
+                    <div id="titleAreaCase" class="title-filtro">
+                        <h3>Selecione a(s) áreas(s): </h3>
+                    </div>
+                
+                    <div id="areaFiltro" class="filtroDentro">
+                        <div style="height: 40px;"></div>
+                        <div id="atuacao">            
+                        </div>
+                        <div style="height: 50px;"></div>
+                    </div>
+                <button id="btnAreaOk" onclick="onAmarelo()">Ok</button>
+                <button id="btnAreaLimpa" onclick="limparAreas()">Limpar</button>
+                <div style="width: 100%; margin: 0;height: 50px; background-color: #FFF;">
+                    <button onclick="setABC()"  id="headButton" style="background-color: rgba(76, 175, 80, 0); width: 33%; height: 100%; border-style: solid; border-width: 1px; border-top: none; border-left: none; border-right: none; float: left; text-align: center; color: #E13B39;"> Pesquisa <br> Alfabetica </button>
+                    <button onclick="amarelo()" id="headButton" style="background-color: rgba(76, 175, 80, 0); width: 33%; height: 100%; border-style: solid; border-width: 1px; border-top: none; color: #E13B39; text-align: center;"> Paginas<br> Amarelas </button>
+                    <button onclick="filtro()" id="headButton" style="background-color: rgba(76, 175, 80, 0); width: 33%; height: 100%; border-style: solid; border-width: 1px; border-top: none; border-left: none; border-right: none; float: right; color: #E13B39;"> Filtros </button>
+                </div>
+                <button onclick="subir()" id="bntLt" style="background-color: red; padding:10px;"> <img width="30px" height="30px" src="img/up.png" /> </button>
+                <div id="filters" style="height: auto;">
+                   
+                </div>
+                <div id="corpo" class="list">
+                    
+                </div>
+                
+                
+            </div>
+            
+            <div class="panel" id="folheto" data-title="filtros">
+                <button id="btnEstCase" onclick="activeEst()" style="width: 100%; text-align: center; font-size: 20px; height: 50px; background: red; border-radius: 0px;">Estados: [ clique para selecionar ] </button>
+                <div id="buttonCity"></div>
+                <div id="titleFiltroEst" class="title-filtro">
+                        <h3>Selecione o(s) estado(s): </h3>
+                       </div>
+                   <div id="estadoFiltro" class="filtroDentro">
+                       <div style="height: 40px;"></div>
+                       <div id="std">
+                           
+                       </div>
+                       <div style="height: 50px;"></div>
+                    </div>
+                <button onclick="setCity()" id="btnEstOk">Ok</button>
+                        <div id="titleFiltroCity" class="title-filtro">
+                        <h3>Selecione a(s) cidade(s): </h3>
+                       </div>
+                    <div id="cidadeFiltro" class="filtroDentro">
+                       <div style="height: 40px;"></div>
+                       <div id="city">
+                           
+                       </div>
+                       <div style="height: 50px;"></div>
+                    </div>
+                <button onclick="setAll()" id="btnCityOk">Ok</button>
+                 
+                 <button onclick="listFilters()" style="width: 100%; text-align: center; font-size: 20px; height: 50px; background: #ccc; border-radius: 0px;">OK</button>
+                <button onclick="resetFilters()" style="width: 100%; text-align: center; font-size: 20px; height: 50px; background: #ccc; border-radius: 0px;">Limpar Filtros</button>
+            </div>
+            
+            <div style="background-color: #E13B39;" class="panel" id="page2" data-title="Page 2">
+                <div style="width: 100%; margin: 0;height: 50px; background-color: #FFF;">
+                    <button onclick="funcUsu()" id="headButton" style="background-color: rgba(76, 175, 80, 0); width: 33%; height: 100%; border-style: solid; border-width: 1px; border-top: none; border-left: none; border-right: none; float: left; color: red;"> Ser um usuario </button>
+                    <button onclick="funcAnu()" id="headButton" style="background-color: rgba(76, 175, 80, 0); width: 33%; height: 100%; border-style: solid; border-width: 1px; border-top: none; color: red;"> Ser um anunciante </button>
+                    <button onclick="funcVen()" id="headButton" style="background-color: rgba(76, 175, 80, 0); width: 33%; height: 100%; border-style: solid; border-width: 1px; border-top: none; border-left: none; border-right: none; float: right; color: red;"> Ser um vendedor </button>
+                </div>
+                <div id="contentComo">
+                    <h1 style="text-align: center; color: #FFF;"> Ser um usuario </h1>
+                    <div class="card">
+                      <div style="font-size: 15px;" class="item item-text-wrap">
+                        Para ser um usuário do catalogonanet é simples. Basta ter acesso a internet e a necessidade de encontrar informações de alguma empresa ou profissional como telefone, endereço, produtos ou serviços, além de outros. 
+                      </div>
+                        <div style="font-size: 15px;" class="item item-text-wrap">
+                        Pelo computador acesse www.catalogonanet.com e aproveite, com muita intuitividade, as ferramentas que o catalogo disponibiliza. Ou, se preferir, baixe os apps diretamente da Store do OS de seu smartphone e aproveite com igual intuitividade. 
+                      </div>
+                    </div>
+                    
+                    
+                    <h3 style="text-align: center; color: #FFF;"> Pesquisa Alfabética  </h3>
+                    <div class="card">
+                      <div style="font-size: 15px;" class="item item-text-wrap">
+                        Usando essa ferramenta você poderá localizar as empresas ou profissionais de seu interesse através da barra de ferramentas superior disposta pelas letras do alfabeto. Basta clicar na letra que corresponde a inicial da empresa ou profissional de sua pesquisa que a Página de Resultados trará filtrado todos aqueles que se iniciam com a letra clicada. E você ainda poderá filtrar os resultados por Estado e Cidade. 
+                      </div>                        
+                    </div>
+                    
+                    <h3 style="text-align: center; color: #FFF;"> Paginas amarelas  </h3>
+                    <div class="card">
+                      <div style="font-size: 15px;" class="item item-text-wrap">
+                        Já com essa ferramenta, não se faz necessário saber o nome da empresa ou profissional que procura. Precisa apenas pesquisar pela Área de Atuação ou Profissão que a Página de Resultados trará filtrado todos aqueles que estarão cadastrados na área (ou áreas) que selecionar. Você também poderá filtrar os resultados por Estado e Cidade nessa ferramenta assim como na Pesquisa Alfabética.  
+                      </div>                        
+                    </div>
+                    
+                    <h3 style="text-align: center; color: #FFF;"> Busca Dinâmica  </h3>
+                    <div class="card">
+                      <div style="font-size: 15px;" class="item item-text-wrap">
+                        Essa última ferramenta poderá ser útil de várias formas. Se precisar de produtos ou serviços e a empresa ou profissional tiver associado suas Tags ao que pesquisa; se a empresa ou profissional tiver a palavra pesquisada escrita em seu nome, endereço, web site, e-mail ou apresentação; se precisar descobrir a empresa ou profissional pelo número de telefone, e-mail ou web site; enfim, qualquer “coisa” digitada nessa ferramenta será pesquisada em TODAS AS PARTES DO CATALOGO, trazendo, na Página de Resultados, todas as empresas e profissionais que possam estar ligados, de alguma forma, ao tema da pesquisa. E você poderá filtrar os resultados da pesquisa por Estado e Cidade assim como por Área de Atuação. 
+                      </div>                        
+                    </div>
+                </div>
+            </div>
+            <div onscroll="Dscrolled()" class="panel" id="detalhe" data-title="Detalhe">
+                <div id="detCorpo">
+                <div class="box" id="slider">
+                    
+                </div>
+                    <div id="ponto"></div>
+                    <div id="detalheCorpo">
+                <h3 id="detNome" style="text-align: center;">Vila Kids</h3>
+                        <div style="padding: 10px; margin-top: 10px; width: 100%;height: auto; border: solid 1px; border-top: none; border-left: none; border-right: none; margin-bottom: 0px;">
+                <p id="detArea"> : Festas</p>
+                        </div>
+                        <div style="margin-top: -20px;" id="detEnd"></div>  
+                    <div id="sitelDet" class="telNone" onclick="irSite()" style="padding: 10px; margin-top: 10px; width: 100%;height: auto; border: solid 1px; border-top: none; border-left: none; border-right: none;">
+                    <img style="float: left;" width="15px" height="15px" src="http://www.iconsdb.com/icons/preview/red/globe-xxl.png">
+                    <p id= "detSite"> : www.google.com</p>
+                </div>
+                <div  onclick="irEmail()" id="emailDet" class="telNone" style="padding: 10px; margin-top: 10px; width: 100%;height: auto; border: solid 1px; border-top: none; border-left: none; border-right: none;">
+                    <img style="float: left;" width="15px" height="15px" src="http://www.iconsdb.com/icons/preview/red/email-12-xxl.png">
+                    <p id= "detEmail"> : affneto@yahoo.com.br</p></div>
+                </div>
+                <div id="detCel"></div>
+                <div id="detTel"></div>
+                    </div>
+                <button onclick="subirDet()" id="bntLtDet" style="background-color: red; padding:10px;"> <img width="30px" height="30px" src="img/up.png" /> </button>
+                </div>
+            </div>
+            
+        
+
+        <nav id="left">
+            <div class="view active">
+                <header style="background: #E13B39;">
+                    <h1>Menu</h1>
+                </header>
+                <div class="pages">
+                    <div class="panel active" id="navPage1" data-title="Foobar">
+                        <ul class="list">
+                            <li style="padding-top: 10px; padding-left: 20px; font-size: 20px; padding-right: 3px;"><a href="#main" onclick="$.afui.clearHistory()">Inicio</a></li>
+                            <li style="padding-top: 10px; padding-left: 20px; font-size: 20px; padding-right: 3px;"><a href="#page2" onclick="$.afui.clearHistory()">Como Funciona</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+.select-estiloso{
+    padding: 5px;
+}
+
+.check{
+    float: left;
+    margin-right: 5px;
+    height: 25px;
+    width: 25px;
+    border: 1px solid;
+    border-radius: 5px;
+    background: #FFF;
+    font-size: 22px;
+    text-align: center;
+    padding: 1px;
+}
+
+.title-filtro{
+    display: none;
+    position: absolute;
+    width: 80%;
+    height: 40px;
+    left: 10%;
+    top: 10%;
+    background-color: red;
+    border: 3px solid;
+    z-index: 9999;
+}
+
+.filtroDentro{
+    display: none;
+    overflow-y: scroll;
+    border: 2px solid;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    background-color: #FFF;
+    z-index: 9998;
+}
+
+.filtroDentro h3{
+    text-align: center;
+    color: #FFF;
+}
+
+
+#btnAreaOk{
+    display: none;
+    border: 1px solid;
+    position: absolute;
+    z-index: 9999;
+    width: 40%;
+    height: 50px;
+    left: 10%;
+    bottom: 9%;
+    text-align: center;
+    border-radius: 0px;
+    border-color: #000;
+}
+
+#btnAreaLimpa{
+    display: none;
+    border: 1px solid;
+    position: absolute;
+    z-index: 9999;
+    width: 40%;
+    height: 50px;
+    left: 50%;
+    bottom: 9%;
+    text-align: center;
+    border-radius: 0px;
+    border-color: #000;
+}
+
+#btnEstOk{
+    display: none;
+    border: 1px solid;
+    position: absolute;
+    z-index: 9999;
+    width: 80%;
+    height: 50px;
+    left: 10%;
+    bottom: 9%;
+    text-align: center;
+    border-radius: 0px;
+    border-color: #000;
+}
+
+#btnCityOk{
+    display: none;
+    border: 1px solid;
+    position: absolute;
+    z-index: 9999;
+    width: 80%;
+    height: 50px;
+    left: 10%;
+    bottom: 9%;
+    text-align: center;
+    border-radius: 0px;
+    border-color: #000;
+}
+
+
+.check p{
+    display:none;    
+}
+
+.checked{
+    background: #0FFF00;
+}
+
+#checks{
+    margin-top: 0px;
+}
+
+#itemList:active {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+#headButton:active{
+	background-color: rgba(255, 0, 0, 0.5);
+}
+
+#slider{
+	overflow: hidden;
+	width: 100%;
+	background-color: #000;
+}
+
+#footer{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	height: 37px;
+	width: 100%;
+	background: #E13B39;
+}
+#blank__{
+	height: 37px;
+	width: 100%;
+}
+
+.nActive{
+    display: none;
+}
+
+#ponto{
+    height: 5px;
+    background: red;
+    margin-top: 0px;
+}
+
+.areaDentro{
+    color: #ccc;
+    font-size: 10px;
+}
+
+#telefoneDet{
+	padding: 10px 0px 10px 20px;
+	width: 50%;
+	float: left;
+	border: solid 1px;
+	border-bottom: none;
+	border-top: none;
+	border-left: none;
+}
+
+#telefoneDet img{
+	float: left;
+	margin-right: 10px;
+}
+
+#telefoneDet active{
+	opacity: 0.5;
+}
+
+#siteDet{
+	padding: 10px 0px 10px 20px;
+	width: 50%;
+	float: right;
+	border: solid 1px;
+	border-bottom: none;
+	border-top: none;
+	border-left: none;
+}
+
+#siteDet img{
+	float: left;
+	margin-right: 10px;
+}
+
+#siteDet active{
+	opacity: 0.5;
+}
+
+.item-title{
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.telNone{
+    display: none;
+}
+
+#menuCase{
+    height: 30px;
+    width: 30px;
+    background: url(img/menu.png);
+}
+
+#menuNew{
+    height: 100%;
+    width: 70%;
+    margin-left: -70%;
+}
+
+#letterTop{
+    width: 400%;
+    clear: both;
+    height: 45px;
+    overflow: hidden;
+}
+
+.ABCativo{
+    color: red;
+    background: #ccc;
+}
+
+#bntLt{
+    color: red;
+    border: none;
+    display: none;
+    height: 55px;
+    width: 55px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50px;
+    z-index: 9999;
+    color: #FFF;
+}
+
+#bntLtDet{
+    color: red;
+    border: none;
+    display: none;
+    height: 55px;
+    width: 55px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50px;
+    z-index: 9999;
+    color: #FFF;
+}
+
+.btnLetter{
+    background: red;
+    color: #FFF;
+    float: left;
+    display: inline-block;
+    white-space: nowrap;
+    height: 35px;
+    width: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-right: -5px;
+    border: none;
+}
+
+#abc1{
+    margin-left: 0;
+}
+
+#abc2{
+    margin-left: 100%;
+}
+
+#abc3{
+    margin-left: 100%;
+}
+
+#abc4{
+    margin-left: 1;
+}

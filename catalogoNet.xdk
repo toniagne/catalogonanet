@@ -1,0 +1,564 @@
+{
+  "project": {
+    "projectSettingsVersion": "3.0.0",
+    "creationData": {
+      "projectTypeName": "com.intel.xdk.projecttype.jsapp",
+      "src": "jsapp/template-side-menu-js/sample.zip",
+      "projectGuid": "ba163702-23ec-4593-a95c-2046ab40a2b5",
+      "lastModifiedDate": 1477688421849,
+      "creationDate": 1472403857405
+    },
+    "sourceDirectory": "www",
+    "cordovaPluginsDirectory": "plugins",
+    "startFile": "index.html",
+    "projectFiles": {
+      "xdk-publish-meta-data.json": {
+        "settings": {
+          "project": {
+            "XDK-not-deployed": "True"
+          }
+        }
+      }
+    },
+    "projectDirectories": {
+      "www/xdk": {
+        "settings": {
+          "project": {
+            "XDK-generated": "true"
+          }
+        }
+      }
+    },
+    "libraries": [],
+    "cordovaPlugins": [
+      {
+        "id": "cordova-plugin-statusbar",
+        "name": "StatusBar",
+        "version": "2.1.0",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-statusbar",
+        "gitref": "",
+        "paramvals": {},
+        "selectedState": "Included",
+        "dependsOn": [],
+        "topLevel": true,
+        "cordovaVersion": ">=3.0.0",
+        "permissions": {},
+        "description": "Cordova StatusBar Plugin",
+        "data": {},
+        "dependedBy": [],
+        "checksum": "858cc583"
+      },
+      {
+        "id": "cordova-plugin-device",
+        "version": "1.1.1",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": [],
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-device",
+        "permissions": {},
+        "topLevel": true,
+        "gitref": "",
+        "name": "Device",
+        "description": "Cordova Device Plugin",
+        "checksum": "927290ca"
+      },
+      {
+        "id": "cordova-plugin-splashscreen",
+        "version": "3.2.0",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": [],
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-splashscreen",
+        "permissions": {},
+        "topLevel": true,
+        "gitref": "",
+        "name": "Splashscreen",
+        "description": "Cordova Splashscreen Plugin",
+        "checksum": "452a4659"
+      },
+      {
+        "id": "cordova-plugin-network-information",
+        "name": "Network Information",
+        "version": "1.2.0",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-network-information",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/cordova-plugin-network-information",
+        "selectedState": "Included",
+        "checksum": "ca19365f",
+        "dependsOn": [],
+        "topLevel": true,
+        "permissions": {
+          "android:name": [
+            "android.permission.ACCESS_NETWORK_STATE"
+          ]
+        },
+        "description": "Cordova Network Information Plugin",
+        "data": {},
+        "dependedBy": []
+      },
+      {
+        "id": "cordova-plugin-dialogs",
+        "name": "Notification",
+        "version": "1.2.0",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-dialogs",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/cordova-plugin-dialogs",
+        "selectedState": "Included",
+        "checksum": "1af74557",
+        "dependsOn": [],
+        "topLevel": true,
+        "permissions": {},
+        "description": "Cordova Notification Plugin",
+        "data": {},
+        "dependedBy": []
+      }
+    ],
+    "serviceMethods": [],
+    "buildConfigurations": {
+      "Android": {
+        "platform_": "android",
+        "runtime_": "Cordova 3.x",
+        "name_": "Android",
+        "preferences_": {
+          "android-minSdkVersion": "14",
+          "android-targetSdkVersion": "21",
+          "android-installLocation": "auto",
+          "android-signed": true
+        },
+        "isActive_": true,
+        "certificateId_": "iTukffUQ7UeFhZEtY3EGng2",
+        "appName_": "catalogonanet",
+        "appID_": "br.com.catalogonanet",
+        "appAccess_": {
+          "mode": "whitelist",
+          "network": [
+            "*"
+          ],
+          "intents": [
+            "http://*/*",
+            "https://*/*",
+            "tel:*",
+            "sms:*",
+            "mailto:*",
+            "geo:*",
+            "market:*"
+          ],
+          "navigation": []
+        },
+        "icons_": [
+          {
+            "density": "ldpi",
+            "relPath": "package-assets/lauch1.png",
+            "width": 36,
+            "height": 36
+          },
+          {
+            "density": "mdpi",
+            "relPath": "package-assets/lauch2.png",
+            "width": 48,
+            "height": 48
+          },
+          {
+            "density": "hdpi",
+            "relPath": "package-assets/lauch3.png",
+            "width": 72,
+            "height": 72
+          },
+          {
+            "density": "xhdpi",
+            "relPath": "package-assets/lauch4.png",
+            "width": 96,
+            "height": 96
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "package-assets/intro1.png",
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "package-assets/intro2.png",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "package-assets/intro3.png",
+            "density": "hdpi",
+            "height": 640,
+            "width": 480,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "package-assets/intro4.png",
+            "density": "xhdpi",
+            "height": 960,
+            "width": 720,
+            "orientation": "portrait"
+          }
+        ],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "5.4.1",
+        "appVersion_": "1.1",
+        "appVersionCode_": "2",
+        "crosswalkVersion_": "19",
+        "appAuthor_": "Gabriel Arcanjo",
+        "appDescription_": "Aplicativo do site www.catalogonanet.com"
+      },
+      "iOS": {
+        "platform_": "ios",
+        "runtime_": "Cordova 3.x",
+        "name_": "iOS",
+        "preferences_": {
+          "ios-configuration": "production",
+          "deployment-target": "8.0"
+        },
+        "isActive_": true,
+        "certificateId_": "",
+        "appName_": "catalogonanet",
+        "appID_": "br.com.catalogonanet",
+        "appAccess_": {
+          "mode": "whitelist",
+          "network": [
+            "*"
+          ],
+          "intents": [
+            "http://*/*",
+            "https://*/*",
+            "tel:*",
+            "sms:*",
+            "mailto:*",
+            "geo:*",
+            "itms:*",
+            "itms-apps:*"
+          ],
+          "navigation": [],
+          "properties": {}
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "iosProvs_": [],
+        "cordovaCLIVersion_": "5.4.1",
+        "appVersion_": "1.0",
+        "appAuthor_": "Gabriel Arcanjo",
+        "crosswalkVersion_": "19",
+        "appDescription_": "Aplicativo do site www.catalogonanet.com"
+      },
+      "Windows8": {
+        "platform_": "windows8",
+        "runtime_": "Cordova 3.x",
+        "name_": "Windows8",
+        "preferences_": {
+          "windows-publisher-id": "catalogonanet - Seu Negócio no Mundo dos Negócios",
+          "windows-publisher-display-name": "catalogonanet - Seu Negócio no Mundo dos Negócios",
+          "wp81-publisher-id": "catalogonanet - Seu Negócio no Mundo dos Negócios"
+        },
+        "isActive_": true,
+        "certificateId_": "",
+        "appName_": "catalogonanet",
+        "appID_": "br.com.catalogonanet",
+        "appAccess_": {
+          "mode": "whitelist",
+          "network": [
+            "*"
+          ],
+          "intents": [
+            "http://*/*",
+            "https://*/*",
+            "tel:*",
+            "sms:*",
+            "mailto:*",
+            "geo:*"
+          ],
+          "navigation": [],
+          "properties": {}
+        },
+        "icons_": [
+          {
+            "relPath": "package-assets/wphone1.png",
+            "width": 24,
+            "height": 24
+          },
+          {
+            "relPath": "package-assets/wphone2.png",
+            "width": 30,
+            "height": 30
+          },
+          {
+            "relPath": "package-assets/wphone3.png",
+            "width": 33,
+            "height": 33
+          },
+          {
+            "relPath": "package-assets/wphone4.png",
+            "width": 50,
+            "height": 50
+          },
+          {
+            "relPath": "package-assets/wphone5.png",
+            "width": 58,
+            "height": 58
+          },
+          {
+            "relPath": "package-assets/wphone6.png",
+            "width": 70,
+            "height": 70
+          },
+          {
+            "relPath": "package-assets/wphone7.png",
+            "width": 120,
+            "height": 120
+          },
+          {
+            "relPath": "package-assets/wphone8.png",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "relPath": "package-assets/wphone9.png",
+            "width": 62,
+            "height": 62
+          },
+          {
+            "relPath": "package-assets/wphone10.png",
+            "width": 71,
+            "height": 71
+          },
+          {
+            "relPath": "package-assets/wphone11.png",
+            "width": 99,
+            "height": 99
+          },
+          {
+            "relPath": "package-assets/wphone12.png",
+            "width": 106,
+            "height": 106
+          },
+          {
+            "relPath": "package-assets/wphone13.png",
+            "width": 150,
+            "height": 150
+          },
+          {
+            "relPath": "package-assets/wphone14.png",
+            "width": 170,
+            "height": 170
+          },
+          {
+            "relPath": "package-assets/wphone15.png",
+            "width": 210,
+            "height": 210
+          },
+          {
+            "relPath": "package-assets/wphone16.png",
+            "width": 360,
+            "height": 360
+          },
+          {
+            "relPath": "package-assets/wphone17.png",
+            "width": 310,
+            "height": 310
+          },
+          {
+            "relPath": "package-assets/wphone19.png",
+            "width": 310,
+            "height": 150
+          },
+          {
+            "relPath": "package-assets/wphone20.png",
+            "width": 434,
+            "height": 210
+          },
+          {
+            "relPath": "package-assets/wphone21.png",
+            "width": 744,
+            "height": 360
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "package-assets/wslapsh1.png",
+            "height": 300,
+            "width": 620,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "package-assets/wslapsh2.png",
+            "height": 800,
+            "width": 480,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "package-assets/wslapsh3.png",
+            "height": 1120,
+            "width": 672,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "package-assets/wslapsh4.png",
+            "height": 1920,
+            "width": 1152,
+            "orientation": "landscape"
+          }
+        ],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "5.4.1",
+        "appVersion_": "1.0",
+        "appAuthor_": "catalogonanet",
+        "crosswalkVersion_": "19",
+        "appDescription_": "Aplicativo do site www.catalogonanet.com"
+      },
+      "WebApp": {
+        "platform_": "webapp",
+        "runtime_": "W3C",
+        "name_": "WebApp",
+        "preferences_": {},
+        "isActive_": false,
+        "certificateId_": "",
+        "appName_": "catalogoNet",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "http://debug-software.intel.com/*",
+            "https://debug-software.intel.com/*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1",
+        "appAuthor_": "Intel XDK"
+      },
+      "Firefox": {
+        "platform_": "firefoxos",
+        "runtime_": "W3C on Firefox OS",
+        "name_": "Firefox",
+        "preferences_": {},
+        "isActive_": false,
+        "certificateId_": "",
+        "appName_": "catalogoNet",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "http://debug-software.intel.com/*",
+            "https://debug-software.intel.com/*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1",
+        "appAuthor_": "Intel XDK"
+      },
+      "Chrome": {
+        "platform_": "chromeos",
+        "runtime_": "W3C on Chrome OS",
+        "name_": "Chrome",
+        "preferences_": {},
+        "isActive_": false,
+        "certificateId_": "",
+        "appName_": "catalogoNet",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "http://debug-software.intel.com/*",
+            "https://debug-software.intel.com/*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1",
+        "appAuthor_": "Intel XDK"
+      },
+      "Facebook": {
+        "platform_": "facebook",
+        "runtime_": "W3C on Facebook",
+        "name_": "Facebook",
+        "preferences_": {},
+        "isActive_": false,
+        "certificateId_": "",
+        "appName_": "catalogoNet",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "http://debug-software.intel.com/*",
+            "https://debug-software.intel.com/*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1",
+        "appAuthor_": "Intel XDK"
+      },
+      "WP81": {
+        "platform_": "wp81",
+        "runtime_": "Cordova 3.x",
+        "name_": "WP81",
+        "preferences_": {},
+        "isActive_": true,
+        "certificateId_": "",
+        "appName_": "catalogoNet",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "http://debug-software.intel.com/*",
+            "https://debug-software.intel.com/*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.0.1",
+        "cordovaCLIVersion_": "5.4.1",
+        "appAuthor_": "Intel XDK"
+      }
+    },
+    "gameAssetDirectory": "asset",
+    "gameMetadata": {},
+    "projectTags": [
+      "XDK-disallow-legacy-whitelist"
+    ],
+    "testDirectory": "test"
+  }
+}
