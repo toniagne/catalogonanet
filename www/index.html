@@ -15,17 +15,43 @@
     <link rel="stylesheet" type="text/css" href="lib/appframework/af.ui.css" />
     <link rel="stylesheet" type="text/css" href="css/ionic.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/jquery-3.1.1.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/fastclick.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/appframework/appframework.ui.min.js"></script>
-        <script type="text/javascript" charset="utf-8" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.js"></script>
         
     <script src='cordova.js'></script>
+
+    <style>
+
+#footer {
+bottom:0px;
+background-color: #ffffff;
+height:10px;
+right:0%;
+left:0%;
+position:fixed!important;
+position:absolute;
+width=100%;
+top:expression((0-(footer.offsetHeight)+
+(document.documentElement.clientHeight?
+document.documentElement.clientHeight:
+document.body.clientHeight)+(ignoreMe=document.documentElement.scrollTop?
+document.documentElement.scrollTop:document.
+body.scrollTop))+'px');
+text-align:center;
+visibility:visible;
+z-index: 9999999999999; 
+}
+
+
+</style>
+
 </head>
 
 <body>
@@ -61,22 +87,19 @@
                         </div>
                         <div style="height: 50px;"></div>
                     </div>
-                <button id="btnAreaOk" onclick="onAmarelo()">Ok</button>
-                <button id="btnAreaLimpa" onclick="limparAreas()">Limpar</button>
+
+                <button id="btnAreaOk" style="z-index: 999999;" onclick="onAmarelo()">Ok</button>
+                <button id="btnAreaLimpa" style="z-index: 999999;"  onclick="limparAreas()">Limpar</button>
                 <div style="width: 100%; margin: 0;height: 50px; background-color: #FFF;">
                     <button onclick="setABC()"  id="headButton" style="background-color: rgba(76, 175, 80, 0); width: 33%; height: 100%; border-style: solid; border-width: 1px; border-top: none; border-left: none; border-right: none; float: left; text-align: center; color: #E13B39;"> Pesquisa <br> Alfabetica </button>
                     <button onclick="amarelo()" id="headButton" style="background-color: rgba(76, 175, 80, 0); width: 33%; height: 100%; border-style: solid; border-width: 1px; border-top: none; color: #E13B39; text-align: center;"> Paginas<br> Amarelas </button>
                     <button onclick="filtro()" id="headButton" style="background-color: rgba(76, 175, 80, 0); width: 33%; height: 100%; border-style: solid; border-width: 1px; border-top: none; border-left: none; border-right: none; float: right; color: #E13B39;"> Filtros </button>
                 </div>
-                <button onclick="subir()" id="bntLt" style="background-color: red; padding:10px;"> <img width="30px" height="30px" src="img/up.png" /> </button>
-                <div id="filters" style="height: auto;">
-                   
+               
+                <div id="filters" style="height: auto;">                   
                 </div>
-                <div id="corpo" class="list">
-                    
-                </div>
-                
-                
+                <div id="corpo" class="list">                    
+                </div> 
             </div>
             
             <div class="panel" id="folheto" data-title="filtros">
@@ -162,11 +185,11 @@
                         </div>
                         <div style="margin-top: -20px;" id="detEnd"></div>  
                     <div id="sitelDet" class="telNone" onclick="irSite()" style="padding: 10px; margin-top: 10px; width: 100%;height: auto; border: solid 1px; border-top: none; border-left: none; border-right: none;">
-                    <img style="float: left;" width="15px" height="15px" src="http://www.iconsdb.com/icons/preview/red/globe-xxl.png">
+                    <img style="float: left;" width="15px" height="15px" src="img/globe-xxl.png">
                     <p id= "detSite"> : www.google.com</p>
                 </div>
                 <div  onclick="irEmail()" id="emailDet" class="telNone" style="padding: 10px; margin-top: 10px; width: 100%;height: auto; border: solid 1px; border-top: none; border-left: none; border-right: none;">
-                    <img style="float: left;" width="15px" height="15px" src="http://www.iconsdb.com/icons/preview/red/email-12-xxl.png">
+                    <img style="float: left;" width="15px" height="15px" src="img/email-12-xxl.png">
                     <p id= "detEmail"> : affneto@yahoo.com.br</p></div>
                 </div>
                 <div id="detCel"></div>
@@ -195,6 +218,16 @@
         </nav>
 
     </div>
+    <Br><Br>
+    <div id="footer"> 
+         <button onclick="subir()" id="bntLt" style="background-color: red; padding:10px;"> 
+                <img width="30px" height="30px" src="img/up.png" /> 
+                </button>
+
+
+
+         <button onclick="subirDet()" id="bntLtDet" style="background-color: red; padding:10px;"> <img width="30px" height="30px" src="img/up.png" /> </button>
+     </div>
 </body>
 
 </html>
