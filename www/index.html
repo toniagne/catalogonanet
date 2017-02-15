@@ -23,8 +23,7 @@
     <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/fastclick.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/appframework/appframework.ui.min.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.js"></script>
-        
+        <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.js"></script> 
     <script src='cordova.js'></script>
 
     <style>
@@ -48,13 +47,44 @@ text-align:center;
 visibility:visible;
 z-index: 9999999999999; 
 }
-
+#headButton {
+                    background-color: rgba(76, 175, 80, 0);
+                    width: 33%;
+                    height: 100%;
+                    border-style: solid;
+                    border-width: 1px;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    float: left;
+                    text-align: center;
+                    color: #E13B39;
+                }
 
 </style>
+ 
+   <link rel="stylesheet" href="css/xpull.css">
+    <script src="js/xpull.js"></script>
 
+    <script>
+
+        // jquery document ready
+        $(function () {
+
+            // Init xpull plugin for demo
+            $('#aplicativo').xpull({
+                'callback': function () {
+                    return setABC();
+                }
+            });
+
+        });
+    </script>
+ 
 </head>
 
-<body>
+<body >
+
     <div id="splashscreen" class='ui-loader heavy'>
         App Framework
         <br>
@@ -63,7 +93,16 @@ z-index: 9999999999999;
         <h1>Starting app</h1>
     </div>
 
-    <div class="view splitview">
+    <div class="view splitview" id = "aplicativo">
+     <div class="xpull">
+            <div class="xpull__start-msg">
+                <div class="xpull__start-msg-text">Puxe para baixo. &amp; Solte para atualizar.</div>
+                <div class="xpull__arrow"></div>
+            </div>
+            <div class="xpull__spinner">
+                <div class="xpull__spinner-circle"></div>
+            </div>
+        </div>
         
         <div style="height: 40px; width: 100%;background: #E13B39;">
             <div style="height: 25px; width: 20px; margin: 5px 3px;float:left" id="menuCase" data-left-menu="left" data-transition="cover"><img src="img/menu.png" width="20px" height="25px" /></div>
@@ -75,7 +114,7 @@ z-index: 9999999999999;
             <div id="pesquisa" style="height: 40px; width: 75%; margin-right: 3%; margin-top: auto; float: right;"><input placeholder="Digite aqui o que você procura" onkeypress="pesqKey(event)" id="buscaQuery" style="padding: 0px; font-weight: bold; width: 100%; margin-right: 10px; margin-bottom: 0px; border-radius: 0px;" type="text"></div>
         </div>
         
-        <div class="pages">
+        <div class="pages" >
             <div onscroll="scrolled()" class="panel" id="main" data-title="Catalogo Net" data-selected="true">
                     <div id="titleAreaCase" class="title-filtro">
                         <h3>Selecione a(s) áreas(s): </h3>
@@ -90,10 +129,14 @@ z-index: 9999999999999;
 
                 <button id="btnAreaOk" style="z-index: 999999;" onclick="onAmarelo()">Ok</button>
                 <button id="btnAreaLimpa" style="z-index: 999999;"  onclick="limparAreas()">Limpar</button>
+                  
+
                 <div style="width: 100%; margin: 0;height: 50px; background-color: #FFF;">
-                    <button onclick="setABC()"  id="headButton" style="background-color: rgba(76, 175, 80, 0); width: 33%; height: 100%; border-style: solid; border-width: 1px; border-top: none; border-left: none; border-right: none; float: left; text-align: center; color: #E13B39;"> Pesquisa <br> Alfabetica </button>
-                    <button onclick="amarelo()" id="headButton" style="background-color: rgba(76, 175, 80, 0); width: 33%; height: 100%; border-style: solid; border-width: 1px; border-top: none; color: #E13B39; text-align: center;"> Paginas<br> Amarelas </button>
-                    <button onclick="filtro()" id="headButton" style="background-color: rgba(76, 175, 80, 0); width: 33%; height: 100%; border-style: solid; border-width: 1px; border-top: none; border-left: none; border-right: none; float: right; color: #E13B39;"> Filtros </button>
+                    <button onclick="setABC()"  id="headButton" class="botaoMenus"> Pesquisa <br> Alfabetica </button>
+                    
+                    <button onclick="amarelo()" id="headButton" class="botaoMenus"> Paginas<br> Amarelas </button>
+                    
+                    <button onclick="filtro()" id="headButton" class="botaoMenus"> Filtros </button>
                 </div>
                
                 <div id="filters" style="height: auto;">                   

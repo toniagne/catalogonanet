@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.catalogonanet.toni" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Catalogo na Net</name>
+<widget id="com.catalogonanet.toni" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>catalogonanet</name>
     <description>
         Sua empresa no celular
     </description>
@@ -11,7 +11,7 @@
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="SplashScreen" value="splash" />
-    <preference name="SplashScreenDelay" value="2000" /> 
+    <preference name="SplashScreenDelay" value="4000" /> 
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="StatusBarOverlaysWebView" value="false" />
