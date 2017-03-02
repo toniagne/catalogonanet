@@ -1045,8 +1045,8 @@ function pesqKey(e){
 }
 
 function pesquisaClick(){
-    pesquisaTmp = document.getElementById('buscaQuery');
-    var query = pesquisaTmp.textContent || el.innerText;
+    pesquisaTmp = document.getElementById('buscaQuery').value;
+    var query = document.getElementById('buscaQuery').value;
     document.getElementById('buscaQuery').value = "";
     var data = {
         busca : query
