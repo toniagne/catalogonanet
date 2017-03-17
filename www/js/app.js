@@ -1040,7 +1040,7 @@ function pesqKey(e){
      if (e.keyCode == 13) {
          load();
          pesquisaClick();
-         document.getElementById("#corpo").focus();
+         //document.getElementById("#corpo").focus();
      }
 }
 
